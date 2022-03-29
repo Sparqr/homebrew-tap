@@ -5,21 +5,21 @@
 class GitSemver < Formula
   desc "Git extension to easily manage your project's version based on Semantic Versioning and Conventional Commits"
   homepage "https://github.com/sparqr/git-semver"
-  version "0.6.1"
+  version "0.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sparqr/git-semver/releases/download/v0.6.1/git-semver_0.6.1_Darwin_x86_64.tar.gz"
-      sha256 "5990a871b1e29ff04257bc266142fbf2731686511590e126f964b7c76e6299a8"
+    if Hardware::CPU.arm?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.0.0/git-semver_0.0.0_Darwin_arm64.tar.gz"
+      sha256 "1477a4cda0051f4de7a4e730716019b66690aa5ac169b23ff786e172dc457d73"
 
       def install
         bin.install "git-semver"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sparqr/git-semver/releases/download/v0.6.1/git-semver_0.6.1_Darwin_arm64.tar.gz"
-      sha256 "b540397381e5b49ec2527bded10513ee14f5f487d1b74940e9277cd6a54047ec"
+    if Hardware::CPU.intel?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.0.0/git-semver_0.0.0_Darwin_x86_64.tar.gz"
+      sha256 "f8cb74e538b4d08943e093afb58b8920599bfcda9a6d587cec4cbcaf867eb7f2"
 
       def install
         bin.install "git-semver"
@@ -29,16 +29,16 @@ class GitSemver < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sparqr/git-semver/releases/download/v0.6.1/git-semver_0.6.1_Linux_x86_64.tar.gz"
-      sha256 "bcd09fb992033a1fcfb23d8f4001a8908d2c23b7e1218d6b564288dec2efff8c"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.0.0/git-semver_0.0.0_Linux_x86_64.tar.gz"
+      sha256 "87cbdf4508fd3df297736c9f676614f839593f6ca7bd84b66cf18c7c9e35634f"
 
       def install
         bin.install "git-semver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sparqr/git-semver/releases/download/v0.6.1/git-semver_0.6.1_Linux_arm64.tar.gz"
-      sha256 "1f17ea065a4223aa6a4afb78c0f57b9b8d34b63372348a08503bad9f773f0e1f"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.0.0/git-semver_0.0.0_Linux_arm64.tar.gz"
+      sha256 "1859e2dac4804f108169c815a2a6152a39c2ec4a2fa0bf3b05813153f4755325"
 
       def install
         bin.install "git-semver"
