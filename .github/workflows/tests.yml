@@ -16,6 +16,8 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
         with:
           debug: true
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
