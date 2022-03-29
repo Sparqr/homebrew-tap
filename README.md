@@ -1,10 +1,10 @@
-# Carlsberg Tap
+# Sparqr Tap
 
 ## How do I install these formulae?
 
-`brew install carlsberg/tap/<formula>`
+`brew install sparqr/tap/<formula>`
 
-Or `brew tap carlsberg/tap` and then `brew install <formula>`.
+Or `brew tap sparqr/tap` and then `brew install <formula>`.
 
 ## Documentation
 
