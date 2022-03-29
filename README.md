@@ -1,6 +1,6 @@
 # Sparqr Tap
 
-## How do I install these formulae?
+## Installation Guide
 
 `brew install sparqr/tap/<formula>`
 
