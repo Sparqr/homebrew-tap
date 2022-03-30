@@ -10,7 +10,7 @@ class GitSemver < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Darwin_arm64.tar.gz"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "37c44661b1e7640222e778e0f8b30e85915a4da48b0fd5b7b728675e08c46255"
 
       def install
@@ -18,7 +18,7 @@ class GitSemver < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Darwin_x86_64.tar.gz"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "07bfc5d492c2b7c7e6127af77ab89a3c6d8bfe4b5b036139204dbb70475b9932"
 
       def install
@@ -29,7 +29,7 @@ class GitSemver < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Linux_x86_64.tar.gz"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "d4d0c4ac3a5790997c002cd2ff496edb28ea4bfdb8f08aed77df5b1bdbf325f1"
 
       def install
@@ -37,7 +37,7 @@ class GitSemver < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Linux_arm64.tar.gz"
+      url "https://github.com/Sparqr/git-semver/releases/download/0.2.0/git-semver_0.2.0_Linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
       sha256 "6a0f076b1363d2ca15dcd11249c12890dc15d6f1631bc7997059bbc68678b4eb"
 
       def install
