@@ -11,6 +11,18 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
+      - id: gh-token
+        name: Get a GitHub token
+        uses: getsentry/action-github-app-token@v1
+        with:
+          app_id: ${{ secrets.RELEASE_APP_ID }}
+          private_key: "${{ secrets.RELEASE_APP_PRIVATE_KEY }}"
+        
+      - name: Configure Git
+        run: |
+          git config --global user.name "${{ secrets.RELEASE_APP_USER_NAME }}"
+          git config --global user.email "${{ secrets.RELEASE_APP_USER_EMAIL }}"
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
