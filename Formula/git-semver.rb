@@ -6,21 +6,21 @@ require_relative "../download_strategy"
 class GitSemver < Formula
   desc "Git extension to easily manage your project's version based on Semantic Versioning and Conventional Commits"
   homepage "https://github.com/sparqr/git-semver"
-  version "0.3.5"
+  version "0.3.6"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.3.5/git-semver_0.3.5_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "366f63d0842c8b28e49a8aac30f63f641a6214b374a71286be2749f7c41cdc53"
+    if Hardware::CPU.arm?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.3.6/git-semver_0.3.6_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "0a87bcddb74971e88807ad8198e3d68c3d3ac6815284753c686e27a10d40e6fb"
 
       def install
         bin.install "git-semver"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.3.5/git-semver_0.3.5_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "19cee90f53808703a2878b8f391a82d8845696ef69acccfc18dcbf19db4d3c0e"
+    if Hardware::CPU.intel?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.3.6/git-semver_0.3.6_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c73a9b24938709fc086f9a8d79e09ab936bc8cedf71ce987583e93e8f2973a4d"
 
       def install
         bin.install "git-semver"
@@ -29,17 +29,17 @@ class GitSemver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.3.5/git-semver_0.3.5_Linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "dff38903d52ed7fca4101870c93f5c42eadf6689c643038e16eb48c58db55cd5"
+    if Hardware::CPU.intel?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.3.6/git-semver_0.3.6_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f0b9bc9996b124283dc895aa63b162ec54d1fed177a7389cb61669ea1b412d07"
 
       def install
         bin.install "git-semver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Sparqr/git-semver/releases/download/0.3.5/git-semver_0.3.5_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "86256f0c7020bc051c58ea326430f2050f9c835164a78116fa12747828b67adc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Sparqr/git-semver/releases/download/0.3.6/git-semver_0.3.6_Linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "186e72607b6c0526e8cb9a34af8ebe089d6d603b0e373eb3599ac822102ba0ed"
 
       def install
         bin.install "git-semver"
