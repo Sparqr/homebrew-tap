@@ -22,16 +22,15 @@ jobs:
         run: |
           git config --global user.name "${{ secrets.RELEASE_APP_USER_NAME }}"
           git config --global user.email "${{ secrets.RELEASE_APP_USER_EMAIL }}"
+          git config --list
 
       - name: Set up Homebrew
-        id: set-up-homebrew
-        run: |
-          git config --global user.name "${{ secrets.RELEASE_APP_USER_NAME }}"
-          git config --global user.email "${{ secrets.RELEASE_APP_USER_EMAIL }}"
-          git config --list
+        id: set-up-homebrew          
         uses: Homebrew/actions/setup-homebrew@master
         with:
           debug: true
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ steps.gh-app-token.outputs.token }}
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
