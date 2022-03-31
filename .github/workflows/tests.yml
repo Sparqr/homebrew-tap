@@ -25,6 +25,7 @@ jobs:
 
       - name: Set up Homebrew
         id: set-up-homebrew
+        run: git config --list
         uses: Homebrew/actions/setup-homebrew@master
         with:
           debug: true
