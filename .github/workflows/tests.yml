@@ -27,7 +27,7 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
-          debug: true
+          debug: false
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.gh-app-token.outputs.token }}
 
